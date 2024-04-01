@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav a.nav-link {
+    color: white !important; /* Color del texto */
+    position: relative; /* Para posicionar el elemento secundario de manera relativa */
+}
+
+.navbar-nav a.nav-link::after {
+    content: ''; /* Crea un elemento pseudo después del enlace */
+    position: absolute; /* Posiciona el elemento absolutamente */
+    left: 0; /* Coloca la barra alineada a la izquierda */
+    bottom: -2px; /* Ajusta la posición de la barra debajo del texto */
+    width: 100%; /* Ancho de la barra */
+    height: 2px; /* Altura de la barra */
+    background-color: black; /* Color de la barra */
+    visibility: hidden; /* Oculta inicialmente la barra */
+    transition: visibility 0s, width 0.3s; /* Transición suave */
+}
+
+.navbar-nav a.nav-link:hover::after {
+    visibility: visible; /* Muestra la barra cuando el enlace es hoveado */
+    width: 100%; /* Ancho completo cuando el enlace es hoveado */
+}
+.navbar-brand{
+    color: black
+}
