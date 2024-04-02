@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #003554 !important;/* Cambia #f0f0f0 por el color que desees */
+}
+
 .navbar-nav a.nav-link {
     color: white !important; /* Color del texto */
     position: relative; /* Para posicionar el elemento secundario de manera relativa */
+    margin-right: 50px;
+    
 }
 
 .navbar-nav a.nav-link::after {
@@ -31,14 +37,88 @@
 
 /* Estilo para ajustar tamaño de la imagen del carousel */
 .carousel-item img {
-    max-width: 95%; /* Ancho máximo de la imagen */
+    max-width: 100%; /* Ancho máximo de la imagen */
     max-height: 600px; /* Altura máxima de la imagen */
     margin: auto; /* Centra la imagen horizontalmente */
+    border-radius: 10px;
   }
 
 /* Estilo para hacer transparente el fondo de los botones de control */
-.carousel-control-prev, .carousel-control-next {
-    background-color: transparent; /* Hace el fondo transparente */
-    border: none; /* Elimina el borde */
-    width: 5%; /* Ajusta el ancho de las flechas */
+    .carousel-control-prev, .carousel-control-next {
+        background-color: transparent; /* Hace el fondo transparente */
+        border: none; /* Elimina el borde */
+        width: 100%; /* Ajusta el ancho de las flechas */
+    }
+
+/* Estilo para el contenedor del carrusel */
+#carouselExampleCaptions {
+    width: 90%; /* Aumentar el ancho del contenedor */
+    margin-top: 200px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-right: auto;
+    margin-left: auto;
+ 
+    border: 3px solid #ddd; /* Borde delgado */
+    padding: 0; /* Elimina cualquier relleno interno */
+    border-radius: 10px;
   }
+
+.carousel-indicators button {
+    margin-top: -30px; /* Ajusta la posición vertical */
+    width: 20px; /* Ancho del botón */
+    height: 20px; /* Altura del botón */
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+#navsuperior {
+    color: white !important; /* Color del texto */
+    background-color: #032030 !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#navinferior {
+    background-color: #022B42 !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+}
+
+
+.featurette-divider {
+    margin: 5rem 0;
+    border: none; /* Elimina el borde */
+    border-top: 5px solid #006494; /* Define el grosor y color de la línea */
+    opacity: 0.55;
+    width: 80%; /* Ancho deseado */
+    margin-left: auto; /* Centra la línea horizontalmente */
+    margin-right: auto; /* Centra la línea horizontalmente */
+    border-radius: 10px;
+}
