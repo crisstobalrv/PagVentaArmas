@@ -28,3 +28,17 @@
 .navbar-brand{
     color: black
 }
+
+/* Estilo para ajustar tamaño de la imagen del carousel */
+.carousel-item img {
+    max-width: 95%; /* Ancho máximo de la imagen */
+    max-height: 600px; /* Altura máxima de la imagen */
+    margin: auto; /* Centra la imagen horizontalmente */
+  }
+
+/* Estilo para hacer transparente el fondo de los botones de control */
+.carousel-control-prev, .carousel-control-next {
+    background-color: transparent; /* Hace el fondo transparente */
+    border: none; /* Elimina el borde */
+    width: 5%; /* Ajusta el ancho de las flechas */
+  }
