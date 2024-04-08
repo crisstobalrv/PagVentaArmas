@@ -1,0 +1,81 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+
+/* Estilos para las tarjetas de producto */
+.card {
+    margin-top: 100px;
+    height: 100%; /* Ajusta la altura de la tarjeta */
+    
+}   
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-grow: 1;
+}
+.card-header {
+    background-color: #004d74; /* Color del navbar */
+    color: #fff; /* Color del texto */
+}   
+
+@media (min-width: 768px) {
+    .col {
+        margin-right: 20px; /* Espacio entre las tarjetas */
+        margin-left: 20px; /* Espacio entre las tarjetas */
+    }
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-image {
+    height: 200px; /* Ajusta la altura de la imagen del producto */
+    background-size: contain; /* La imagen de fondo se ajusta para caber dentro del contenedor */
+    background-position: center; /* La imagen de fondo se posiciona en el centro */
+    margin-bottom: 15px; /* Añade un espacio entre la imagen y el contenido */
+    background-repeat: no-repeat;
+}
+
+.card-title {
+    font-size: 24px; /* Ajusta el tamaño del título del producto */
+    margin-bottom: 10px; /* Añade un espacio entre el título y el precio */
+}
+
+.pricing-card-title {
+    font-size: 18px; /* Ajusta el tamaño del precio */
+}
+
+.btn-primary {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    z-index: -1;
+}
+
+/* Cambia el color del fondo del botón cuando se hace hover */
+.btn-primary:hover::before {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente */
+}
+main {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: none; /* Elimina el ancho máximo */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-right: 0; /* Elimina el margen derecho */
+}
+    
