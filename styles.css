@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #022b42 !important;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
@@ -24,23 +24,29 @@ body {
     margin: 0px 0px;
     padding: 3px 20px;
     text-transform: uppercase;
-    background-color: #004d74 !important;
+    background-color: #ede0d4 !important;
     max-height: 60px;
     /* Establece un ancho máximo para el navbar */
 }
+
 main {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    max-width: none; /* Elimina el ancho máximo */
-    margin-left: 0; /* Elimina el margen izquierdo */
-    margin-right: 0; /* Elimina el margen derecho */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    max-width: none;
+    /* Elimina el ancho máximo */
+    margin-left: 0;
+    /* Elimina el margen izquierdo */
+    margin-right: 0;
+    /* Elimina el margen derecho */
 }
+
 /* Estilos para los enlaces del navbar */
 .navbar-nav .nav-link {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     font-size: 18px;
-    color: #fff;
+    color: #573b8a;
     /* Cambiado a color blanco */
     position: relative;
     text-decoration: none;
@@ -56,7 +62,7 @@ main {
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
     font-size: 18px;
-    color: #fff;
+    color: #573b8a;
     /* Cambiado a color blanco */
     position: relative;
     text-decoration: none;
@@ -74,7 +80,7 @@ main {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #573b8a;
     transition: width 0.3s;
 }
 
@@ -82,7 +88,7 @@ main {
 .navbar-nav .nav-link:hover {
     transform: scale(1.3);
     /* Aumenta la escala del texto */
-    color: #fff;
+    color: #573b8a;
     /* Mantenemos el color del texto blanco cuando se pasa el mouse sobre el botón */
 }
 
@@ -93,7 +99,7 @@ main {
 
 /* Estilos para el botón seleccionado */
 .navbar-nav .nav-link.active {
-    color: #fff;
+    color: #573b8a;
     /* Mantenemos el color del texto blanco cuando el botón está seleccionado */
 }
 
@@ -102,7 +108,7 @@ main {
     font-weight: 600;
     font-size: 12px;
     /* Reducimos el tamaño de la fuente */
-    color: #fff;
+    color: #573b8a;
     /* Cambiamos el color a blanco */
     margin-right: 10px;
     /* Ajustamos el margen derecho */
@@ -126,21 +132,25 @@ main {
 @media (max-width: 991.98px) {
 
     .navbar-collapse {
-    position: absolute;
-    background-color: #004d74;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    align-items: center;
-    border-top: 5px solid; /* Línea inicialmente transparente */
-    transition: border-width 0.3s/* Agrega transición */
-}
+        position: absolute;
+        background-color: #ede0d4;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        align-items: center;
+        border-top: 5px solid;
+        /* Línea inicialmente transparente */
+        transition: border-width 0.3s
+            /* Agrega transición */
+    }
 
-.navbar-collapse.show {
-    border-top-color: black; /* Cambia el color de la línea al blanco */
-    border-top-width: 5px; /* Asegura que la línea tenga una anchura */
-}
+    .navbar-collapse.show {
+        border-top-color: black;
+        /* Cambia el color de la línea al blanco */
+        border-top-width: 5px;
+        /* Asegura que la línea tenga una anchura */
+    }
 
 
 
@@ -150,7 +160,7 @@ main {
         margin: 0;
         padding: 3px 20px;
         text-transform: uppercase;
-        background-color: #004d74 !important;
+        background-color: #ede0d4 !important;
         max-height: 60px;
         /* Establece un ancho máximo para el navbar */
         display: flex;
@@ -162,9 +172,11 @@ main {
         padding-top: 20px;
         /* Ajuste para compensar el espacio adicional */
     }
+
     .navbar-nav {
         padding: 0%;
-        text-align: center; /* Alinea los elementos al centro */
+        text-align: center;
+        /* Alinea los elementos al centro */
     }
 
     .navbar-brand img {
@@ -199,97 +211,93 @@ main {
     }
 
     /* Estilos para el botón de desplegar enlaces */
-.navbar-toggler {
-    width: 145px !important; /* Aumenta el ancho máximo del botón */
-    padding: 8px 16px; /* Ajusta el espacio interno del botón */
-    border-radius: 8px; /* Hace los bordes más marcados */
-    color: #004d74 !important; /* Cambia el color del texto del botón */
-    border: 2px solid black!important; /* Establece un borde sólido */
-}
+    .navbar-toggler {
+        width: 145px !important;
+        /* Aumenta el ancho máximo del botón */
+        padding: 8px 16px;
+        /* Ajusta el espacio interno del botón */
+        border-radius: 8px;
+        /* Hace los bordes más marcados */
+        color: #ede0d4 !important;
+        /* Cambia el color del texto del botón */
+        border: 2px solid black !important;
+        /* Establece un borde sólido */
+    }
 
-/* Estilos para el icono del botón de desplegar enlaces */
-.navbar-toggler-icon {
-    background-image: url('flecha-abajo.png'); /* Icono de flecha hacia abajo */
-    width: 20px; /* Ajusta el tamaño según tus necesidades */
-    height: 20px;
-}
+    /* Estilos para el icono del botón de desplegar enlaces */
+    .navbar-toggler-icon {
+        background-image: url('flecha-abajo.png');
+        /* Icono de flecha hacia abajo */
+        width: 20px;
+        /* Ajusta el tamaño según tus necesidades */
+        height: 20px;
+    }
 
-.navbar-toggler.collapsed .navbar-toggler-icon {
-    background-image: url('flecha-arriba.png'); /* Icono de flecha hacia arriba */
-}
-
-    /* Estilos para los enlaces del navbar */
-    .navbar-nav .nav-link {
-        /* Añade un borde blanco a los botones */
-        padding: 10px 10px;
-        /* Añade espacio alrededor del texto en los botones */
-        border-radius: 5px;
-        /* Añade esquinas redondeadas a los botones */
-        display: block;
-        /* Muestra los botones como bloques para que ocupen todo el ancho disponible */
-        color: white;
-        /* Cambia el color del texto a blanco */
-        text-decoration: none;
-        /* Elimina el subrayado */
-        text-align: center;
-        /* Centra el texto dentro de los botones */
-        transition: background-color 0.3s, border-color 0.3s;
-        /* Agrega una transición suave al color de fondo y al borde */
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-image: url('flecha-arriba.png');
+        /* Icono de flecha hacia arriba */
+        width: 20px;
+        /* Ajusta el tamaño según tus necesidades */
+        height: 20px;
     }
 
     /*carosel */
     .carousel {
-            z-index: 1;
+        z-index: 1;
         margin-top: calc(100px + 20px);
         /* Ajusta según la altura de tu encabezado y el espacio adicional */
         margin-left: 300px;
         margin-right: 300px;
         max-height: 700px;
     }
+
+    .navbar-brand {
+        margin-right: auto;
+        /* Empuja el logotipo a la izquierda */
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 30px;
+        /* Elimina el margen derecho para los enlaces */
+        margin-bottom: 10px;
+        /* Agrega un margen inferior entre los enlaces */
+    }
+
+
+
+    .navbar-nav .nav-login-link {
+        font-weight: 600;
+        font-size: 12px;
+        color: #fff;
+        margin-right: 10px;
+        transition: transform 0.3s;
+        /* Agregamos una transición para el efecto de zoom */
+        text-decoration: none;
+        padding: 5px 10px;
+        /* Añadimos un padding para dar espacio alrededor del texto */
+        border: 2px solid transparent;
+        /* Establecemos un borde transparente */
+        border-radius: 5px;
+    }
+
+    /* Estilos para el botón Login y Register cuando el mouse está encima */
+    .navbar-nav .nav-login-link:hover {
+        border-color: #fff;
+        /* Cambiamos el color del borde al pasar el mouse por encima */
+    }
 }
 
 
-.navbar-brand {
-    margin-right: auto;
-    /* Empuja el logotipo a la izquierda */
-}
 
-.navbar-nav .nav-link {
-    margin-right: 30px;
-    /* Elimina el margen derecho para los enlaces */
-    margin-bottom: 10px;
-    /* Agrega un margen inferior entre los enlaces */
-}
-
-
-
-.navbar-nav .nav-login-link {
-    font-weight: 600;
-    font-size: 12px;
-    color: #fff;
-    margin-right: 10px;
-    transition: transform 0.3s;
-    /* Agregamos una transición para el efecto de zoom */
-    text-decoration: none;
-    padding: 5px 10px;
-    /* Añadimos un padding para dar espacio alrededor del texto */
-    border: 2px solid transparent;
-    /* Establecemos un borde transparente */
-    border-radius: 5px;
-}
-
-/* Estilos para el botón Login y Register cuando el mouse está encima */
-.navbar-nav .nav-login-link:hover {
-    border-color: #fff;
-    /* Cambiamos el color del borde al pasar el mouse por encima */
-}
 
 /* Estilos para el carrusel */
 .carousel-item img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Escala las imágenes para que cubran el área del carousel */
-    transition: none; /* Desactiva las transiciones en las imágenes */
+    object-fit: cover;
+    /* Escala las imágenes para que cubran el área del carousel */
+    transition: none;
+    /* Desactiva las transiciones en las imágenes */
 
 }
 
@@ -358,7 +366,7 @@ main {
 .featurette-divider {
     margin: 5rem 0;
     border: none;
-    border-top: 5px solid #006494;
+    border-top: 5px solid #ede0d4;
     opacity: 0.55;
     width: 80%;
     margin-left: auto;
