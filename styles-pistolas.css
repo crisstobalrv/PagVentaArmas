@@ -53,24 +53,23 @@
 }
 
 .btn-primary {
-    position: relative;
-    z-index: 1;
+    background-color: black !important;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 1.5em 3.1em;
+    letter-spacing: 1.3px;
+    box-shadow: 2px 2px 25px -7px black;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave */
 }
 
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
-    z-index: -1;
-}
-
-/* Cambia el color del fondo del botón cuando se hace hover */
-.btn-primary:hover::before {
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente */
+.btn-primary:hover {
+    background-color: white !important;
+    color: black !important;
+    box-shadow: 2px 2px 25px -7px gray; /* Cambiamos la sombra */
 }
 main {
     width: 100%; /* Ocupa todo el ancho disponible */
