@@ -175,10 +175,6 @@ footer a:hover {
     align-items: center;
 }
 
-img {
-    width: 3.5rem;
-}
-
 .navbar-nav .nav-link {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -223,6 +219,10 @@ img {
 .nav-login-link {
     text-decoration: none;
     color: white;
+}
+.navbar-brand {
+    margin-right: auto;
+        width: 3.5rem;
 }
 
 @media (max-width: 991.98px) {
@@ -276,6 +276,7 @@ img {
 
     .navbar-brand {
         margin-right: auto;
+            width: 3.5rem;
     }
 
     .navbar-nav .nav-link {
