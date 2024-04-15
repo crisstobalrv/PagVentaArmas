@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pago</title>
+  <link rel="stylesheet" href="./styles-pago.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form action="">
+                <h1>
+                    <i class="fas fa-shipping-fast"></i>
+                    Detalles de envio
+                </h1>
+                <div class="name">
+                    <div>
+                        <label for="f-name">Nombre</label>
+                        <input type="text" name="f-name">
+                    </div>
+                    <div>
+                        <label for="l-name">Apellido</label>
+                        <input type="text" name="l-name">
+                    </div>
+                </div>
+                <div class="street">
+                    <label for="name">Calle</label>
+                    <input type="text" name="address">
+                </div>
+                <div class="address-info">
+                    <div>
+                        <label for="city">Ciudad</label>
+                        <input type="text" name="city">
+                    </div>
+                    <div>
+                        <label for="state">Region</label>
+                        <input type="text" name="state">
+                    </div>
+                    <div>
+                        <label for="zip">Codigo Postal  </label>
+                        <input type="text" name="zip">
+                    </div>
+                </div>
+                <h1>
+                    <i class="far fa-credit-card"></i> Informacion de pago
+                </h1>
+                <div class="cc-num">
+                    <label for="card-num">Numero de tarjeta</label>
+                    <input type="text" name="card-num">
+                </div>
+                <div class="cc-info">
+                    <div>
+                        <label for="card-num">Fecha de exp</label>
+                        <input type="text" name="expire">
+                    </div>
+                    <div>
+                        <label for="card-num">CCV</label>
+                        <input type="text" name="security">
+                    </div>
+                </div>
+                <div class="btns">
+                    <button>Comprar</button>
+                    <button onclick="window.location.href='carrito.html'; return false;">Volver al carrito</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

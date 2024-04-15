@@ -75,11 +75,13 @@ button:hover{
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #573b8a;
-	transform: scale(.6);
-    text-align: center; /* Centra el texto horizontalmente */
-  display: block; /* Muestra el texto en una línea independiente */
-  margin-top: 80px auto; /* Ajusta el margen superior e inferior y centra horizontalmente */
+		color: #573b8a;
+		transform: scale(.6);
+		text-align: center;
+		display: block;
+		white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+		line-height: 1.7; /* Ajusta la altura de línea según sea necesario */
+
 }
 
 #chk:checked ~ .login{
@@ -91,3 +93,24 @@ button:hover{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
+
+/* Estilos para el botón "Volver" */
+.back-btn {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	padding: 10px 20px;
+	background-color: #573b8a;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+  }
+  
+  .back-btn:hover {
+	background-color: #6d44b8;
+  }
+
+  
+
+  
