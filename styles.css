@@ -59,11 +59,10 @@ html {
 
 .navbar-nav .nav-link {
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 1px;
-    font-size: 14px;
+    letter-spacing: 3px;
+    font-size: 20px;
     /* Reducimos el tamaño del texto */
-    color: #573b8a;
+    color: #573b8a  ;
     position: relative;
     text-decoration: none;
     margin-right: 20px;
@@ -80,7 +79,8 @@ html {
 
 .extrabuttons {
     display: flex;
-    margin-right: 35px;
+    margin-right: 50px;
+    letter-spacing: 10px;
 }
 
 .extrabuttons a {
@@ -112,6 +112,10 @@ html {
         width: 3.5rem;
 }
 
+/* */
+
+
+
 @media (max-width: 991.98px) {
     .navbar-collapse {
         position: absolute;
@@ -122,28 +126,30 @@ html {
         z-index: 999;
         align-items: center;
         border-top: 5px solid;
-        transition: border-width 0.3s;
     }
 
     .navbar {
         min-width: 435px;
         height: 100%;
-        width: 100%;
         opacity: 1;
-        margin-top: -15px;
-        padding: 3px 20px;
+        padding: 0px 20px;
         text-transform: uppercase;
         background-color: #ede0d4 !important;
-        max-height: 60px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        --bs-navbar-padding-x: unset !important;
+    --bs-navbar-padding-y: unset !important;
     }
+    
 
 
     .navbar-nav {
         padding: 0%;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 
     .navbar-login {
@@ -172,7 +178,8 @@ html {
     }
 }
 
-/*carosel */
+
+/* Estilos para el carrusel */
 .carousel {
     z-index: 1;
     margin-top: calc(100px + 20px);
@@ -182,46 +189,6 @@ html {
     max-height: 700px;
 }
 
-.navbar-brand {
-    margin-right: auto;
-    /* Empuja el logotipo a la izquierda */
-}
-
-.navbar-nav .nav-link {
-    margin-right: 30px;
-    /* Elimina el margen derecho para los enlaces */
-    margin-bottom: 10px;
-    /* Agrega un margen inferior entre los enlaces */
-}
-
-
-
-.navbar-nav .nav-login-link {
-    font-weight: 600;
-    font-size: 12px;
-    color: #fff;
-    margin-right: 10px;
-    transition: transform 0.3s;
-    /* Agregamos una transición para el efecto de zoom */
-    text-decoration: none;
-    padding: 5px 10px;
-    /* Añadimos un padding para dar espacio alrededor del texto */
-    border: 2px solid transparent;
-    /* Establecemos un borde transparente */
-    border-radius: 5px;
-}
-
-/* Estilos para el botón Login y Register cuando el mouse está encima */
-.navbar-nav .nav-login-link:hover {
-    border-color: #fff;
-    /* Cambiamos el color del borde al pasar el mouse por encima */
-}
-
-
-
-
-
-/* Estilos para el carrusel */
 .carousel-item img {
     width: 100%;
     height: auto;
