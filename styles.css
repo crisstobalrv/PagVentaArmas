@@ -13,11 +13,16 @@ body {
     padding: 0;
 }
 
+/*carousel*/
+#carouselContainer {
+    margin-top: 60px; /* Ajusta el valor según tus necesidades */
+}
 
 
 main {
     width: 100%;
     /* Ocupa todo el ancho disponible */
+    margin-top: 60px;
 }
 
 html {
@@ -129,7 +134,7 @@ html {
     }
 
     .navbar {
-        min-width: 435px;
+        min-width: 375px;
         height: 100%;
         opacity: 1;
         padding: 0px 20px;
@@ -176,77 +181,16 @@ html {
         /* Reducimos el espacio entre elementos */
         margin-bottom: 10px;
     }
+
+    .extrabuttons {
+        display: flex;
+        margin-right: 0;
+        letter-spacing: normal;
+    }
 }
 
 
-/* Estilos para el carrusel */
-.carousel {
-    z-index: 1;
-    margin-top: calc(100px + 20px);
-    /* Ajusta según la altura de tu encabezado y el espacio adicional */
-    margin-left: 300px;
-    margin-right: 300px;
-    max-height: 700px;
-}
 
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    /* Escala las imágenes para que cubran el área del carousel */
-    transition: none;
-    /* Desactiva las transiciones en las imágenes */
-
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    font-size: 5rem;
-    padding: 20px;
-    pointer-events: auto;
-}
-
-/*carosel */
-.carousel {
-    margin-top: calc(100px + 20px);
-    /* Ajusta según la altura de tu encabezado y el espacio adicional */
-    margin-left: 300px;
-    margin-right: 300px;
-    image-resolution: 1280-190;
-}
-
-/* Estilos para los botones de control del carrusel */
-.carousel-indicators button {
-    margin-top: -30px;
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    pointer-events: relative;
-}
-
-/* Estilos para las flechas del carrusel */
-.carousel-indicators button::before,
-.carousel-indicators button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background: transparent;
-}
-
-.carousel-indicators button::before {
-    left: 0;
-}
-
-.carousel-indicators button::after {
-    right: 0;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    pointer-events: auto;
-}
 
 /* Estilos adicionales */
 .row {

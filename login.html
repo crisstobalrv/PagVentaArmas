@@ -7,28 +7,40 @@
 </head>
 <body>
   <a href="index.html" class="back-btn">Volver al inicio</a>
-<div class="main">  	
-  <input type="checkbox" id="chk" aria-hidden="true">
+  <div class="main">  	
+    <input type="checkbox" id="chk" aria-hidden="true">
 
-  <div class="signup">
-    <form action="index.html"> <!-- Agrega la URL de la página de inicio aquí -->
-      <label for="chk" aria-hidden="true">Registrarse</label>
-      <input type="text" name="txt" placeholder="Nombre de usuario" required="">
-      <input type="email" name="email" placeholder="Correo electrónico" required="">
-      <input type="password" name="pswd" placeholder="Contraseña" required="">
-      <button type="submit">Registrarse</button> <!-- Cambia el tipo de botón a "submit" -->
-    </form>
+    <div class="signup">
+      <form action="index.html" method="get" onsubmit="return validateForm()"> <!-- Agrega la URL de la página de inicio aquí -->
+        <label for="chk" aria-hidden="true">Registrarse</label>
+        <input type="text" name="txt" placeholder="Nombre de usuario" pattern="[a-zA-Z0-9]+" title="Por favor, utiliza solo letras y números." required="">
+        <input type="email" name="email" placeholder="Correo electrónico" required="">
+        <input type="password" name="pswd" placeholder="Contraseña" required="">
+        <button type="submit">Registrarse</button> <!-- Cambia el tipo de botón a "submit" -->
+      </form>
+    </div>
+
+    <div class="login">
+      <form action="index.html"> <!-- Agrega la URL de la página de inicio aquí -->
+        <label for="chk" aria-hidden="true">Iniciar sesión</label>
+        <input type="email" name="email" placeholder="Correo electrónico" required="">
+        <input type="password" name="pswd" placeholder="Contraseña" required="">
+        <button type="submit">Iniciar sesión</button> <!-- Cambia el tipo de botón a "submit" -->
+      </form>
+    </div>
   </div>
 
-  <div class="login">
-    <form action="index.html"> <!-- Agrega la URL de la página de inicio aquí -->
-      <label for="chk" aria-hidden="true">Iniciar sesión</label>
-      <input type="email" name="email" placeholder="Correo electrónico" required="">
-      <input type="password" name="pswd" placeholder="Contraseña" required="">
-      <button type="submit">Iniciar sesión</button> <!-- Cambia el tipo de botón a "submit" -->
-    </form>
-  </div>
-</div>
+  <script>
+    function validateForm() {
+      var username = document.forms[0]["txt"].value;
+      if (!/^[a-zA-Z0-9]+$/.test(username)) {
+        alert("Por favor, utiliza solo letras y números para el nombre de usuario.");
+        return false;
+      }
+      return true;
+    }
+  </script>
 
 </body>
 </html>
+
