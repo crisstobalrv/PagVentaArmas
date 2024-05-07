@@ -87,6 +87,14 @@ form {
         width: 45%;
     }
 }
+.street {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+.street div {
+    margin-right: 180px; /* Ajusta este valor según tus preferencias para reducir el espacio */
+}
 
 .address-info {
     display: flex;

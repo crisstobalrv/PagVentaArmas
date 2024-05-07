@@ -155,6 +155,12 @@ input:focus::-webkit-input-placeholder {
     display: block;
 }
 
+.btn-danger {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .btn:focus {
     box-shadow: none;
     outline: none;

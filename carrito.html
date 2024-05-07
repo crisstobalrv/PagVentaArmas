@@ -11,7 +11,8 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>Inicio</title>
+        <script src="js/añadircarrito.js"></script>
+    <title>Carrito</title>
 </head>
 
 
@@ -78,45 +79,7 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
                             <div class="col align-self-center text-right text-muted">3 items</div>
                         </div>
                     </div>    
-                    <div class="row border-top border-bottom">
-                        <div class="row main align-items-center">
-                            <div class="col-2"><img class="img-fluid" src="img/tec-9.png"></div>
-                            <div class="col">
-                                <div class="row text-muted">Pistola</div>
-                                <div class="row">Tec-9</div>
-                            </div>
-                            <div class="col">
-                                <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
-                            </div>
-                            <div class="col">&dollar; 500  <span class="close">&#10005;</span></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="row main align-items-center">
-                            <div class="col-2"><img class="img-fluid" src="img/glock-18.jpg"></div>
-                            <div class="col">
-                                <div class="row text-muted">Pistola</div>
-                                <div class="row">P250</div>
-                            </div>
-                            <div class="col">
-                                <a href="#">-</a><a href="#" class="border">2</a><a href="#">+</a>
-                            </div>
-                            <div class="col">&dollar; 300 <span class="close">&#10005; 2</span></div>
-                        </div>
-                    </div>
-                    <div class="row border-top border-bottom">
-                        <div class="row main align-items-center">
-                            <div class="col-2"><img class="img-fluid" src="img/fiveseven.JPG"></div>
-                            <div class="col">
-                                <div class="row text-muted">Pistola</div>
-                                <div class="row">Five-Seven</div>
-                            </div>
-                            <div class="col">
-                                <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
-                            </div>
-                            <div class="col">&dollar; 600 <span class="close">&#10005;</span></div>
-                        </div>
-                    </div>
+                <!-- productos -->
                 </div>
                 <div class="col-md-4 summary">
                     <div><h5><b>Resumen</b></h5></div>
@@ -135,12 +98,21 @@ integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEw
                         <div class="col">Total a pagar:</div>
                         <div class="col text-right">&dollar; 1775.00</div>
                     </div>
+                    <button class="btn btn-danger" id="limpiarCarritoBtn">Limpiar Carrito</button>
                     <button class="boton-pagar" onclick="window.location.href='pago.html'">Ir a pagar</button>
                 </div>
             </div>
             
         </div>
     </main>
+    <script>
+        document.getElementById("limpiarCarritoBtn").addEventListener("click", function() {
+            // Limpiar el localStorage
+            localStorage.clear();
+            // Redirigir o realizar otras acciones después de limpiar el carrito
+            alert("El carrito se ha limpiado correctamente.");
+        });
+    </script>
 </body>
 
 </html>

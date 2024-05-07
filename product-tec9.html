@@ -11,7 +11,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <title>Inicio</title>
+    <script src="js/añadircarrito.js"></script>
+    <title>TEC-9</title>
 </head>
 
 <body>
@@ -91,11 +92,37 @@
             </div>
             <div class="row lower">
                 <div class="col text-right align-self-center">
-                    <button class="btn">Añadir al carro</button>
+                    <button id="addToCartButton" class="btn" data-bs-toggle="modal" data-bs-target="#addToCartModal">Añadir al carro</button>
+
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addToCartModalLabel">Producto añadido al carro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¡El producto ha sido añadido exitosamente al carro!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <a href="carrito.html" class="btn btn-primary">Ver Carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("addToCartButton").addEventListener("click", function() {
+        agregarAlCarrito("Tec-9", 500, 1);
+    });
+</script>
 </body>
 
 </html>
