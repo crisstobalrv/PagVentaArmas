@@ -299,25 +299,37 @@ function addUser() {
 }
 //**************************FUNCION DE MODIFICAR******************************************** */
 
-function openModifyUserModal() {
-    // Obtener los datos del usuario de la fila seleccionada
-    const rut = document.querySelector('.products-row .product-cell.rut span').innerText;
-    const nombre = document.querySelector('.products-row .product-cell.nombre span').innerText;
-    // Obtener otros datos del usuario (apellido, email, teléfono, etc.)
+// Función para abrir el modal de modificación con los datos preescritos
+function openModifyModal(row) {
+    // Obtener los datos de la fila
+    const rut = row.querySelector('.rut span').textContent;
+    const nombreCompleto = row.querySelector('.nombre span').textContent;
+    const email = row.querySelector('.email span').textContent;
+    const telefono = row.querySelector('.telefono span').textContent;
 
-    // Preencher los campos del modal con los datos del usuario
+    // Dividir el nombre en nombre y apellido
+    const [nombre, apellido] = nombreCompleto.split(' ');
+
+    // Colocar los datos en los campos del modal
     document.getElementById('modifyRut').value = rut;
     document.getElementById('modifyNombre').value = nombre;
-    // Preencher otros campos del modal con los datos del usuario
+    document.getElementById('modifyApellido').value = apellido;
+    document.getElementById('modifyEmail').value = email;
+    document.getElementById('modifyTelefono').value = telefono;
 
-    // Abrir el modal
+    // Mostrar el modal
     const modifyUserModal = new bootstrap.Modal(document.getElementById('modifyUserModal'));
     modifyUserModal.show();
 }
 
-
-function modifyUser() {
-    // Aquí puedes agregar la lógica para modificar el usuario con los datos ingresados en el modal
-}
-
+// Event listener para el botón de modificar
+const modifyButtons = document.querySelectorAll('.btn-success.adminbtn');
+modifyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Obtener la fila correspondiente al usuario
+        const row = this.closest('.products-row');
+        // Llamar a la función para abrir el modal con los datos preescritos
+        openModifyModal(row);
+    });
+});
 
