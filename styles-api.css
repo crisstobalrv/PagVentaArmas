@@ -1,0 +1,16 @@
+body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    background-size: 100% auto;
+    background-position: top center;
+    margin: 0;
+    padding: 0;
+}
+
+.texto{
+    color: white;
+}
